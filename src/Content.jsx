@@ -1,7 +1,14 @@
 import React from "react";
-import Part from "./Part";
 
 const Content = (props) => {
+
+    const Part = (props) => {
+        return (
+            <div>
+                <p> {props.name} {props.exercises}</p>
+            </div>
+        )
+    }
     return (
         <div>
             <Part name={props.content1.name} exercises={props.content1.exercises} />
