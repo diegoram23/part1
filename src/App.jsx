@@ -24,12 +24,13 @@ const App = () => {
       }
     ]
   }
+
   return (
     <div>
 
-      <Header courseName={course.name} />
+      <Header courseName={course} />
 
-      <Content parts={course.parts} />
+      <Content content={course} />
 
       <Total total={course} />
 
