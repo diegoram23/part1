@@ -1,7 +1,7 @@
 import React from "react";
 
 const Content = (props) => {
-
+        console.log(props)
     const Part = (props) => {
         return (
             <div>
