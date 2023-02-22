@@ -1,9 +1,10 @@
 import React from "react";
 
 const Part = (props) => {
+    console.log('this is part', props)
     return (
         <div>
-            <p> {props.part} {props.exercises} </p>
+            <p> {props.name} {props.exercises}</p>
         </div>
     )
 }
