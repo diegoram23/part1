@@ -3,7 +3,11 @@ import React from "react";
 
 
 const Statistics = (props) => {
-
+    if (props.total === 0) {
+        return (
+            <h2>Statistics</h2>
+        )
+    }
     return (
         <div>
             <h2>Statistics</h2>
