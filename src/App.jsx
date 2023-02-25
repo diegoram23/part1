@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import Statistics from "./Statistics"
-
+import StatisticsLine from "./StatisticsLine"
 
 
 const Button = (props) => {
