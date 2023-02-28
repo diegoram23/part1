@@ -1,32 +1,23 @@
-import React from "react"
-import anecdotes from "./anecdotes"
-import { useState } from 'react'
-
+import React, { useState } from 'react'
+import notes from './notes,jsx'
+import Note from './components/Note'
 
 const App = () => {
 
-  const [selected, setSelected] = useState(anecdotes[0])
-  const [votes, setVotes] = useState(selected)
+  const notesElements = notes.map(note =>
+    <Note
+      key={note.id}
+      content={note.content}
+      important={note.important}
+    />
+  )
 
-  const randomAnecdote = () => {
-
-    const randomNumber = Math.floor(Math.random() * anecdotes.length)
-    const anecValue = anecdotes[randomNumber]
-    setSelected(anecValue)
-    
-  }
-  const vote = () =>  {
-    const copy = { ...selected}
-    selected.count += 1
-    setVotes(copy)
-  }
-  console.log(votes)
   return (
     <div>
-      {`${selected.value}`}
-      <br />
-      <button onClick={vote} >vote</button>
-      <button onClick={randomAnecdote}>Random anecdote</button>
+      <h1>Notes</h1>
+      <ul>
+        {notesElements}
+      </ul>
     </div>
   )
 }
