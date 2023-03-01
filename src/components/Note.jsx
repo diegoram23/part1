@@ -1,11 +1,7 @@
-import React from "react";
-
-const Note = (props) => {
+const Note = ({ note }) => {
     return (
-        <li>
-            {props.content}
-        </li>
+      <li>{note.content}</li>
     )
-}
-
-export default Note
+  }
+  
+  export default Note
